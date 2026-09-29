@@ -35,9 +35,7 @@ char* max(char** s, int size)
     } 
 
     return max; 
-} 
-
-
+}
 
 int main() { 
     int i[5] = {4, 8, 9, 3, 100}; 
