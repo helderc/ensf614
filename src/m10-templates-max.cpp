@@ -40,7 +40,7 @@ char* max(char** s, int size)
 int main() { 
     int i[5] = {4, 8, 9, 3, 100}; 
     double d[5] = {66, 9, 0, 55, 88};
-    const char* s[3] = {"abc", "xyz", "klm"}; 
+    const char* s[3] = {"abc", "xyz", "klm"}; // const will affect the result 
 
     cout << "\tmax of i array is: " << max(i,5) << endl; 
     cout << "\tmax of d array is: " << max(d,5) << endl; 
