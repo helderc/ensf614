@@ -13,7 +13,8 @@ class Array {
 
     public:
         Array(int s): size(s) {
-            storage = new T[size];
+            // safer initiallization with ()
+            storage = new T[size]();
             //...
         }
 
@@ -40,7 +41,7 @@ class ArrayIterator
         T operator--() { 
             index--;
             // /!\ need to check the bounds!
-            if (index <= ptr->size)
+            if (index < 0)
                 index = 0;
             return ptr->storage[index]; 
         }
