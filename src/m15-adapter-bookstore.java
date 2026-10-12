@@ -13,9 +13,8 @@ interface BookCatalog {
 class PublisherApi {
     // returns "title;author;priceInCents", or null if not found
     public String fetchRecord(String code) {
-        if (code.equals("9780132350884")) {
+        if (code.equals("9780132350884")) 
             return "Clean Code;Robert C. Martin;3999";
-        }
         return null;
     }
 }
@@ -31,7 +30,8 @@ class PublisherCatalogAdapter implements BookCatalog {
     @Override
     public Book findByIsbn(String isbn) {
         String raw = api.fetchRecord(isbn);
-        if (raw == null) return null;
+        if (raw == null) 
+            return null;
 
         String[] parts = raw.split(";");
         double price = Integer.parseInt(parts[2]) / 100.0;   // cents -> dollars
