@@ -34,7 +34,7 @@ class PublisherCatalogAdapter implements BookCatalog {
             return null;
 
         String[] parts = raw.split(";");
-        double price = Integer.parseInt(parts[2]) / 100.0;   // cents -> dollars
+        double price = Integer.parseInt(parts[2]) / 100.0;
         return new Book(isbn, parts[0], parts[1], price);
     }
 }
